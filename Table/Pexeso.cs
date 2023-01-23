@@ -2,9 +2,28 @@ namespace Table
 {
     public partial class Pexeso : Form
     {
+        protected bool pandi = false;
         public Pexeso()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            if(pandi)
+            {
+                this.BackColor = Color.Yellow;
+                pandi = false;
+                pictureBox1.Scale(.5f);
+            } else
+            {
+                pandi = true;
+                this.BackColor = Color.AliceBlue; //this. = okno
+                pictureBox1.Scale(2); // pictureBoxN = picture box 300 iq ja vim
+            }
+                
+                
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -66,11 +85,6 @@ namespace Table
         private void pictureBox16_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
