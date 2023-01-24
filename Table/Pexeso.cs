@@ -14,16 +14,16 @@ namespace Table
             {
                 this.BackColor = Color.Yellow;
                 pandi = false;
-                pictureBox1.Scale(.5f);
             } else
             {
                 pandi = true;
                 this.BackColor = Color.AliceBlue; //this. = okno
-                pictureBox1.Scale(2); // pictureBoxN = picture box 300 iq ja vim
+                 // pictureBoxN = picture box 300 iq ja vim
             }
-                
-                
-            
+            pictureBox1.Location = new Point(Random.Shared.Next(1, this.Size.Width-50), Random.Shared.Next(1, this.Size.Height-50));
+
+
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
