@@ -1,3 +1,5 @@
+using System.Drawing;
+
 namespace Table
 {
     public partial class Pexeso : Form
@@ -12,13 +14,16 @@ namespace Table
         {
             if(pandi)
             {
-                this.BackColor = Color.Yellow;
+                Random rnd = new Random();
+                this.BackColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+
                 pandi = false;
             } else
             {
+                Random rnd = new Random();
                 pandi = true;
-                this.BackColor = Color.AliceBlue; //this. = okno
-                 // pictureBoxN = picture box 300 iq ja vim
+                this.BackColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256)); //this. = okno
+                  // pictureBoxN = picture box 300 iq ja vim
             }
             pictureBox1.Location = new Point(Random.Shared.Next(1, this.Size.Width-50), Random.Shared.Next(1, this.Size.Height-50));
 
