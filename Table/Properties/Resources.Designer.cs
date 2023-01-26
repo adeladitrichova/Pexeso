@@ -69,5 +69,13 @@ namespace Table.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        internal static System.Drawing.Bitmap cooooooooo
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("cooooooooo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

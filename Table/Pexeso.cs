@@ -1,5 +1,9 @@
 using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Security.Policy;
+using System.Windows.Forms;
+using Table.Properties;
 
 namespace Table
 {
@@ -21,21 +25,34 @@ namespace Table
                 Random rnd = new Random();
                 this.BackColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
                 pandi = false;
+                
             }
             else
             {
                 Random rnd = new Random();
                 pandi = true;
                 this.BackColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256)); //this. = okno                                                                                   // pictureBoxN = picture box 300 iq ja vim
-
+ 
+            }
+            count++;
+            if (count % 100 == 0)
+            {
+                this.pictureBox1.Image = Image.FromFile("../../../Resources/SILLY100smoll.png");
+            }
+            else if (count % 10 == 0)
+                {
+                    this.pictureBox1.Image = Image.FromFile("../../../Resources/SILLY23.png");
+                }
+            else
+            {
+                this.pictureBox1.Image = Image.FromFile("../../../Resources/SILLYsmoll.png");
             }
 
             pictureBox1.Location = new Point(Random.Shared.Next(1, this.Size.Width - 100), Random.Shared.Next(1, this.Size.Height - 100));
-            count++;
+            
             label1.Text = "už jsi chytil: "+count.ToString()+ ((count > 1) ? ((count > 4) ? " pand" : " pandi") : " pandu");
+
         }
-
-
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -94,6 +111,11 @@ namespace Table
 
         }
         private void pictureBox16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

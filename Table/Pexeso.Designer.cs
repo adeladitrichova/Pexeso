@@ -36,6 +36,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(163, 108);
             this.pictureBox1.Name = "pictureBox1";
@@ -47,11 +48,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(15, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.Size = new System.Drawing.Size(270, 40);
             this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.label1.Text = "PANDI COUNTER";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Pexeso
             // 
